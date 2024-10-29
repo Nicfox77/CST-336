@@ -1,0 +1,159 @@
+/* styles.css */
+
+/* Reset default margins and paddings */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation menu styling */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Clear floats after the nav */
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+}
+
+/* Responsive image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Code blocks */
+code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    font-family: monospace;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* List styles */
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+}
+
+/* Highlighted text */
+strong {
+    color: #4CAF50;
+}
+
+/* Additional properties */
+body {
+    min-width: 320px;
+}
+
+header h1 {
+    font-weight: normal;
+}
+
+main h2 {
+    color: #4CAF50;
+}
+
+nav ul li a.active {
+    background-color: #4CAF50;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
