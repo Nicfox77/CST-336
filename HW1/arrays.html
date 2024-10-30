@@ -1,13 +1,14 @@
+<!-- arrays.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Arrays and Linked Lists</title>
+    <title>Arrays & Linked Lists</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <header>
-    <h1>Arrays and Linked Lists</h1>
+    <h1>Arrays & Linked Lists</h1>
 </header>
 <nav>
     <ul>
@@ -18,42 +19,56 @@
     </ul>
 </nav>
 <main>
-    <h2>Arrays</h2>
-    <p>An array is a collection of items stored at contiguous memory locations. It allows random access to elements using indices.</p>
-    <h3>Characteristics:</h3>
-    <ul>
-        <li><strong>Fixed Size:</strong> The size of an array is defined at the time of declaration and cannot be altered.</li>
-        <li><strong>Homogeneous Elements:</strong> Stores elements of the same data type.</li>
-        <li><strong>Index-Based:</strong> Elements can be accessed using their index positions.</li>
-    </ul>
-    <h3>Advantages:</h3>
-    <ul>
-        <li><strong>Fast Access:</strong> Direct access to elements using indices.</li>
-        <li><strong>Memory Efficiency:</strong> Low memory overhead since elements are stored in contiguous memory.</li>
-    </ul>
-    <h3>Disadvantages:</h3>
-    <ul>
-        <li><strong>Static Size:</strong> Cannot change size at runtime.</li>
-        <li><strong>Costly Insertion/Deletion:</strong> Inserting or deleting elements can be inefficient as it may require shifting elements.</li>
-    </ul>
-    <h2>Linked Lists</h2>
-    <p>A linked list is a linear data structure where each element is a separate object, called a node, which contains data and a reference (link) to the next node.</p>
-    <h3>Characteristics:</h3>
-    <ul>
-        <li><strong>Dynamic Size:</strong> Can grow or shrink at runtime by allocating and deallocating memory.</li>
-        <li><strong>Non-Contiguous Storage:</strong> Nodes are not stored in contiguous memory locations.</li>
-        <li><strong>Sequential Access:</strong> Elements must be accessed in sequence from the first node.</li>
-    </ul>
-    <h3>Advantages:</h3>
-    <ul>
-        <li><strong>Efficient Insertions/Deletions:</strong> Adding or removing nodes does not require shifting elements.</li>
-        <li><strong>Flexible Size:</strong> Can easily adjust size during runtime.</li>
-    </ul>
-    <h3>Disadvantages:</h3>
-    <ul>
-        <li><strong>No Random Access:</strong> Cannot access elements directly; must traverse from the head node.</li>
-        <li><strong>Extra Memory:</strong> Requires additional memory for storing references to the next node.</li>
-    </ul>
+    <div class="content">
+        <div class="text">
+            <h2>Arrays</h2>
+            <p>An array is a collection of items stored at contiguous memory locations. It allows random access to elements using indices. For more information, visit <a href="https://www.geeksforgeeks.org/introduction-to-arrays-data-structure-and-algorithm-tutorials/" target="_blank">this introduction to arrays</a>.</p>
+            <h3>Characteristics:</h3>
+            <ul>
+                <li><strong>Fixed Size:</strong> The size of an array is defined at the time of declaration and cannot be altered.</li>
+                <li><strong>Homogeneous Elements:</strong> Stores elements of the same data type.</li>
+                <li><strong>Index-Based:</strong> Elements can be accessed using their index positions.</li>
+            </ul>
+            <h3>Advantages:</h3>
+            <ul>
+                <li><strong>Fast Access:</strong> Direct access to elements using indices.</li>
+                <li><strong>Memory Efficiency:</strong> Low memory overhead since elements are stored in contiguous memory.</li>
+            </ul>
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li><strong>Static Size:</strong> Cannot change size at runtime.</li>
+                <li><strong>Costly Insertion/Deletion:</strong> Inserting or deleting elements can be inefficient as it may require shifting elements.</li>
+            </ul>
+        </div>
+        <div class="images">
+            <img src="img/arrays.png" alt="Arrays Example">
+        </div>
+    </div>
+    <div class="linked-list-content">
+        <div class="linked-list-text">
+            <h2>Linked Lists</h2>
+            <p>A linked list is a linear data structure where each element is a separate object, called a node, which contains data and a reference (link) to the next node. For more information, visit <a href="https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/" target="_blank">this guide on implementing a linked list in JavaScript</a>.</p>
+            <h3>Characteristics:</h3>
+            <ul>
+                <li><strong>Dynamic Size:</strong> Can grow or shrink at runtime by allocating and deallocating memory.</li>
+                <li><strong>Non-Contiguous Storage:</strong> Nodes are not stored in contiguous memory locations.</li>
+                <li><strong>Sequential Access:</strong> Elements must be accessed in sequence from the first node.</li>
+            </ul>
+            <h3>Advantages:</h3>
+            <ul>
+                <li><strong>Efficient Insertions/Deletions:</strong> Adding or removing nodes does not require shifting elements.</li>
+                <li><strong>Flexible Size:</strong> Can easily adjust size during runtime.</li>
+            </ul>
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li><strong>No Random Access:</strong> Cannot access elements directly; must traverse from the head node.</li>
+                <li><strong>Extra Memory:</strong> Requires additional memory for storing references to the next node.</li>
+            </ul>
+        </div>
+        <div class="linked-list-image">
+            <img src="img/linkedlist.png" alt="Linked List Example">
+        </div>
+    </div>
 </main>
 <footer>
     <p>&copy; 2023 Data Structures Tutorial</p>
