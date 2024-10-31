@@ -1,8 +1,11 @@
+//Event Listeners
+document.querySelector("#guessBtn").addEventListener("click", checkGuess);
+
 //Global variables
 let randomNumber;
 let attempts = 0;
-console.log(randomNumber);
 initializeGame();
+console.log(randomNumber);
 
 function initializeGame() {
     randomNumber = Math.floor(Math.random() * 99) + 1;
@@ -13,4 +16,13 @@ function initializeGame() {
 
     //adding focus to textbox
     document.querySelector("#playerGuess").focus();
+}
+
+function checkGuess(){
+    let guess = document.querySelector("#playerGuess").value;
+    console.log("Player guess: " + guess);
+    if (guess < 1 || guess > 99){
+        alert("Guess out of range")
+        return;
+    }
 }
