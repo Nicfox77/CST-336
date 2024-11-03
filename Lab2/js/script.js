@@ -1,9 +1,14 @@
+// Lab2/js/script.js
+
 //Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", checkGuess);
 document.querySelector("#resetBtn").addEventListener("click", initializeGame);
+
 //Global variables
 let randomNumber;
 let attempts = 0;
+let gamesWon = 0;
+let gamesLost = 0;
 initializeGame();
 console.log(randomNumber);
 
@@ -45,12 +50,16 @@ function checkGuess(){
     if (guess == randomNumber) {
         feedback.textContent = "Congratulations! You guessed the number in " + attempts + " attempts.";
         feedback.style.color = "green";
+        gamesWon++;
+        updateGameStats();
         gameOver();
     } else {
         document.querySelector("#guesses").textContent += guess + " ";
         if (attempts == 7) {
             feedback.textContent = "Sorry, you have run out of attempts. The number was " + randomNumber + ".";
             feedback.style.color = "red";
+            gamesLost++;
+            updateGameStats();
             gameOver();
         } else if (guess > randomNumber) {
             feedback.textContent = "Your guess is too high. Try again.";
@@ -65,4 +74,9 @@ function gameOver() {
     let resetBtn = document.querySelector("#resetBtn");
     guessBtn.style.display = "none";
     resetBtn.style.display = "inline";
+}
+
+function updateGameStats() {
+    document.querySelector("#gamesWon").textContent = gamesWon;
+    document.querySelector("#gamesLost").textContent = gamesLost;
 }
