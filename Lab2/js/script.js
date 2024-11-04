@@ -3,6 +3,11 @@
 //Event Listeners
 document.querySelector("#guessBtn").addEventListener("click", checkGuess);
 document.querySelector("#resetBtn").addEventListener("click", initializeGame);
+document.querySelector("#playerGuess").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        checkGuess();
+    }
+});
 
 //Global variables
 let randomNumber;
