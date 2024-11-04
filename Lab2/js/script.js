@@ -29,6 +29,10 @@ function initializeGame() {
     //showing the Guess button
     document.querySelector("#guessBtn").style.display = "inline";
 
+    //enabling the playerGuess input box
+    document.querySelector("#playerGuess").disabled = false;
+
+
     let playerGuess = document.querySelector("#playerGuess");
     playerGuess.focus();
     playerGuess.value = "";
@@ -47,7 +51,7 @@ function checkGuess(){
     document.querySelector("#playerGuess").value = "";
     guess = parseInt(guess);
     console.log("Player guess: " + guess);
-    if (guess < 1 || guess > 99) {
+    if (guess < 1 || guess > 99 || isNaN(guess)) {
         feedback.textContent = "Please enter a number between 1 and 99.";
         feedback.style.color = "red";
         return;
@@ -86,6 +90,9 @@ function checkGuess(){
 function gameOver() {
     let guessBtn = document.querySelector("#guessBtn");
     let resetBtn = document.querySelector("#resetBtn");
+    let playerGuess = document.querySelector("#playerGuess");
+    playerGuess.blur();
+    playerGuess.disabled = true;
     guessBtn.style.display = "none";
     resetBtn.style.display = "inline";
 }
