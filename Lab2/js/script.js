@@ -45,7 +45,7 @@ function checkGuess(){
     feedback.textContent = "";
     let guess = document.querySelector("#playerGuess").value;
     document.querySelector("#playerGuess").value = "";
-
+    guess = parseInt(guess);
     console.log("Player guess: " + guess);
     if (guess < 1 || guess > 99) {
         feedback.textContent = "Please enter a number between 1 and 99.";
@@ -61,7 +61,7 @@ function checkGuess(){
     attempts++;
     console.log("Attempts: " + attempts);
     feedback.style.color = "orange";
-    if (guess == randomNumber) {
+    if (guess === randomNumber) {
         feedback.textContent = "Congratulations! You guessed the number in " + attempts + " attempts.";
         feedback.style.color = "green";
         gamesWon++;
@@ -69,7 +69,7 @@ function checkGuess(){
         gameOver();
     } else {
         document.querySelector("#guesses").textContent += guess + " ";
-        if (attempts == 7) {
+        if (attempts === 7) {
             feedback.textContent = "Sorry, you have run out of attempts. The number was " + randomNumber + ".";
             feedback.style.color = "red";
             gamesLost++;
@@ -91,6 +91,6 @@ function gameOver() {
 }
 
 function updateGameStats() {
-    document.querySelector("#gamesWon").textContent = gamesWon;
-    document.querySelector("#gamesLost").textContent = gamesLost;
+    document.querySelector("#gamesWon").textContent = String(gamesWon);
+    document.querySelector("#gamesLost").textContent = String(gamesLost);
 }
