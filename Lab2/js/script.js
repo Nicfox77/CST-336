@@ -11,6 +11,7 @@ document.querySelector("#playerGuess").addEventListener("keydown", function(even
 
 //Global variables
 let randomNumber;
+let guesses = [];
 let attempts = 0;
 let gamesWon = 0;
 let gamesLost = 0;
@@ -43,12 +44,20 @@ function checkGuess(){
     let feedback = document.querySelector("#feedback");
     feedback.textContent = "";
     let guess = document.querySelector("#playerGuess").value;
+    document.querySelector("#playerGuess").value = "";
+
     console.log("Player guess: " + guess);
     if (guess < 1 || guess > 99) {
         feedback.textContent = "Please enter a number between 1 and 99.";
         feedback.style.color = "red";
         return;
     }
+    if (guesses.includes(guess)) {
+        feedback.textContent = "You have already guessed that number. Please try again.";
+        feedback.style.color = "red";
+        return;
+    }
+    guesses.push(guess);
     attempts++;
     console.log("Attempts: " + attempts);
     feedback.style.color = "orange";
